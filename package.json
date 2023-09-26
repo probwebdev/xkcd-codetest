@@ -1,0 +1,65 @@
+{
+  "private": true,
+  "name": "xkcd-codetest",
+  "description": "XKCD - codetest",
+  "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",
+  "version": "1.0.0",
+  "bugs": "https://github.com/probwebdev/xkcd-codetest/issues",
+  "license": "MIT",
+  "keywords": [
+    "reactjs",
+    "nextjs",
+    "typescript",
+    "monorepo"
+  ],
+  "scripts": {
+    "postinstall": "husky install",
+    "browserslist": "pnpm dlx browserslist@latest --update-db",
+    "dev": "pnpm --filter=@xkcd/web dev",
+    "start": "pnpm --filter=@xkcd/web start",
+    "export": "pnpm turbo run export",
+    "build": "pnpm turbo run build",
+    "lint:format": "pnpm turbo run lint:format",
+    "lint:css": "pnpm turbo run lint:css",
+    "lint:js": "pnpm turbo run lint:js"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:^",
+    "@acme/lint-staged-config": "workspace:^",
+    "@acme/prettier-config": "workspace:^",
+    "@acme/ts-config": "workspace:^",
+    "@types/node": "^18.17.18",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "eslint": "^8.49.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
+    "stylelint": "^15.10.3",
+    "turbo": "^1.10.14",
+    "typescript": "~5.2.2"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "eslint",
+        "prettier",
+        "stylelint"
+      ]
+    }
+  },
+  "packageManager": "pnpm@8.7.6",
+  "engines": {
+    "node": ">=18.17.0",
+    "pnpm": ">=8.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/probwebdev/xkcd-codetest"
+  },
+  "volta": {
+    "node": "18.18.0",
+    "npm": "9.8.1",
+    "pnpm": "8.7.6"
+  }
+}
