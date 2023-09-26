@@ -1,6 +1,6 @@
 import { ComicImage } from 'src/components/ComicImage';
 
-import { Skeleton } from '~/components/Skeleton';
+import { PaginatedContainer } from '~/containers/Pagination';
 import { trpc } from '~/utils/trpc';
 
 const IndexPage = () => {
@@ -15,9 +15,11 @@ const IndexPage = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center gap-6">
-      {isLoading && <Skeleton width={512} height={512} />}
-      {!isLoading && <ComicImage alt={comic?.alt ?? ''} url={comic?.img} />}
+    <div className="flex flex-col items-center justify-center gap-8 text-center w-screen max-w-sm md:max-w-content">
+      <PaginatedContainer page={comic?.num ?? 0}>
+        <h2>{comic?.title}</h2>
+        {!isLoading && <ComicImage alt={comic?.alt ?? ''} url={comic?.img} />}
+      </PaginatedContainer>
     </div>
   );
 };

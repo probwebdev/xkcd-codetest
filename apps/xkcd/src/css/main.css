@@ -1,0 +1,10 @@
+.pagination {
+  & a {
+    &,
+    &:focus,
+    &:visited,
+    &:active {
+      color: currentColor;
+    }
+  }
+}

@@ -1,9 +1,9 @@
 .comicImage {
-  @apply relative h-full min-h-card w-full max-w-card;
+  @apply relative h-full w-full max-w-card;
 
   & img {
     @apply h-auto w-full;
 
-    object-fit: contain;
+    object-fit: scale-down;
   }
 }
