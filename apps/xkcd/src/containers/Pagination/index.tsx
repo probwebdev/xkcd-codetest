@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import { type PropsWithChildren } from 'react';
 
 import Link from 'next/link';
 
@@ -107,9 +107,7 @@ export const Pagination = ({ page }: PaginationProps) => {
   );
 };
 
-interface PaginatedContainerProps extends PaginationProps {
-  children: ReactNode;
-}
+interface PaginatedContainerProps extends PaginationProps, PropsWithChildren {}
 
 export const PaginatedContainer = ({
   page,

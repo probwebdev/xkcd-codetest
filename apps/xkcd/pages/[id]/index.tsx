@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { ComicImage } from 'src/components/ComicImage';
 
 import { Skeleton } from '~/components/Skeleton';
-import { PaginatedContainer } from '~/containers/Pagination';
+import { LayoutContainer } from '~/containers/LayoutContainer';
 import { trpc } from '~/utils/trpc';
 
 export const ComicPage = () => {
@@ -27,13 +27,11 @@ export const ComicPage = () => {
   }
 
   return (
-    <div className="flex w-screen max-w-sm flex-col items-center justify-between h-full gap-8 text-center md:max-w-content">
-      <PaginatedContainer page={comic?.num ?? 0}>
-        <h2>{comic?.title}</h2>
-        {isLoading && <Skeleton width={512} height={512} />}
-        {!isLoading && <ComicImage alt={comic?.alt ?? ''} url={comic?.img} />}
-      </PaginatedContainer>
-    </div>
+    <LayoutContainer page={comic?.num ?? 0}>
+      <h2>{comic?.title}</h2>
+      {isLoading && <Skeleton width={512} height={512} />}
+      {!isLoading && <ComicImage alt={comic?.alt ?? ''} url={comic?.img} />}
+    </LayoutContainer>
   );
 };
 
