@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "@xkcd/api",
+  "description": "tRPC server",
+  "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",
+  "version": "0.1.0",
+  "bugs": "https://github.com/probwebdev/xkcd-codetest/issues",
+  "license": "MIT",
+  "keywords": [
+    "tRPC"
+  ],
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "dependencies": {
+    "@trpc/server": "^10.38.4",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:^",
+    "@acme/lint-staged-config": "workspace:^",
+    "@acme/prettier-config": "workspace:^",
+    "@acme/ts-config": "workspace:^",
+    "typescript": "^5.2.2"
+  }
+}
