@@ -1,5 +1,5 @@
 .comicImage {
-  @apply relative h-full w-full max-w-card;
+  @apply relative;
 
   & img {
     @apply h-auto w-full;

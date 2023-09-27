@@ -18,7 +18,7 @@ export const Pagination = ({ page }: PaginationProps) => {
   const randomLink = `/${Math.floor(Math.random() * num)}`;
 
   return (
-    <div className="pagination flex w-full flex-row flex-nowrap justify-between gap-4 text-black">
+    <div className="button-links flex w-full flex-row flex-nowrap justify-between gap-4 text-black">
       <div className="flex flex-row flex-nowrap gap-2">
         <Link href="/1">
           <svg

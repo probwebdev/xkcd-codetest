@@ -28,9 +28,11 @@ export const ComicPage = () => {
 
   return (
     <LayoutContainer page={comic?.num ?? 0}>
-      <h2>{comic?.title}</h2>
-      {isLoading && <Skeleton width={512} height={512} />}
-      {!isLoading && <ComicImage alt={comic?.alt ?? ''} url={comic?.img} />}
+      <div className="flex flex-col gap-4">
+        <h2>{comic?.title}</h2>
+        {isLoading && <Skeleton width={512} height={512} />}
+        {!isLoading && <ComicImage alt={comic?.alt ?? ''} url={comic?.img} />}
+      </div>
     </LayoutContainer>
   );
 };

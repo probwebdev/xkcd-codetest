@@ -16,8 +16,10 @@ const IndexPage = () => {
 
   return (
     <LayoutContainer page={comic?.num ?? 0}>
-      <h2>{comic?.title}</h2>
-      {!isLoading && <ComicImage alt={comic?.alt ?? ''} url={comic?.img} />}
+      <div className="flex flex-col gap-4">
+        <h2>{comic?.title}</h2>
+        {!isLoading && <ComicImage alt={comic?.alt ?? ''} url={comic?.img} />}
+      </div>
     </LayoutContainer>
   );
 };
